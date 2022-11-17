@@ -19,4 +19,15 @@ CHIP Mux8Way16 {
 
     PARTS:
     // Put your code here:
+    Mux16(a = a, b = b, sel = sel[0], out = ab);
+    Mux16(a = c, b = d, sel = sel[0], out = cd);
+    Mux16(a = e, b = f, sel = sel[0], out = ef);
+    Mux16(a = g, b = h, sel = sel[0], out = gh);
+
+    Mux16(a = ab, b = cd, sel = sel[1], out = abcd);
+    Mux16(a = ef, b = gh, sel = sel[1], out = efgh);
+
+    Mux16(a = abcd, b = efgh, sel = sel[2], out = out);
+
+    // 圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fcircuitverse.org%2Fusers%2F35601%2Fprojects%2Fmux8way16-4e00b4c3-330d-4d59-80a2-ff471728c6b0&psig=AOvVaw0KhpiEYNOutcpbW5JFWJLo&ust=1668585472347000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIi3irTbr_sCFQAAAAAdAAAAABAT
 }

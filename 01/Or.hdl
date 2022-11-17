@@ -15,4 +15,10 @@ CHIP Or {
 
     PARTS:
     // Put your code here:
+    Nand(a = a, b = a, out = nanda);
+    Nand(a = b, b = b, out = nandb);
+    Nand(a = nanda, b = nandb, out = out);
+
+    // 參考:https://zh.wikipedia.org/zh-tw/%E6%88%96%E9%97%A8
+    // 圖片參考https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/OR_Using_NAND.svg/1920px-OR_Using_NAND.svg.png
 }

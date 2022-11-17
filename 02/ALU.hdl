@@ -42,5 +42,31 @@ CHIP ALU {
         ng; // 1 if (out < 0),  0 otherwise
 
     PARTS:
-   // Put you code here:
+    // Put you code here:
+    // zx, zy
+    Mux16(a = x, b = false, sel = zx, out = muxzx);
+    Mux16(a = y, b = false, sel = zy, out = muxzy);
+
+    // nx, ny
+    Not16(in = muxzx, out = notzx);
+    Not16(in = muxzy, out = notzy);
+    Mux16(a = muxzx, b = notzx, sel = nx, out = muxnx);
+    Mux16(a = muxzy, b = notzy, sel = ny, out = muxny);
+    
+    // f
+    And16(a = muxnx, b = muxny, out = andxy);
+    Add16(a = muxnx, b = muxny, out = addxy);
+    Mux16(a = andxy, b = addxy, sel = f, out = muxf);
+
+    // no, ng
+    Not16(in = muxf, out = notf);
+    Mux16(a = muxf, b = notf, sel = no, out = out, out[0..7] = out1, out[8..15] = out2, out[15] = ng);
+
+    // zr
+    Or8Way(in = out1, out = or81);
+    Or8Way(in = out2, out = or82);
+    Or(a = or81, b = or82, out = orab);
+    Not(in = orab, out = zr);
+
+    // 參考:https://github.com/Olical/nand2tetris/blob/master/chips/arithmatic/ALU.hdl
 }

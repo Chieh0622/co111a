@@ -14,4 +14,22 @@ CHIP Xor {
 
     PARTS:
     // Put your code here:
+// method1:
+    Nand(a = a, b = b, out = nandab);
+    Or(a = a, b = b, out = orab);
+    And(a = nandab, b = orab, out = out);
+
+    // 圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.m.wikipedia.org%2Fwiki%2FFile%3A3_gate_XOR.svg&psig=AOvVaw2-DepRt8Fm19vDDQPUBp8I&ust=1668609547955000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJiSmYy1sPsCFQAAAAAdAAAAABAr
+
+/* method2:
+    Not(in = a, out = nota);
+    Not(in = b, out = notb);
+
+    And(a = a, b = notb, out = andanb);
+    And(a = nota, b = b, out = andnab);
+
+    Or(a = andanb, b = andnab, out = out);
+
+    圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.electronicshub.org%2Fexclusive-or-gatexor-gate%2F&psig=AOvVaw2-DepRt8Fm19vDDQPUBp8I&ust=1668609547955000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJiSmYy1sPsCFQAAAAAdAAAAABA1
+*/
 }

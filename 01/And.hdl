@@ -14,5 +14,17 @@ CHIP And {
     OUT out;
 
     PARTS:
-    // Put your code here:
+    // Put your code here: 
+// method1:
+    Nand(a = a, b = b, out = nandab);
+    Not(in = nandab, out = out);
+
+/* method2:
+    a and b = (a nand b) nand (a nand b)
+   code:
+    Nand(a = a, b = b, out = nandab);
+    Nand(a = nandab, b = nandab, out = out);
+
+    參考:https://zh.wikipedia.org/zh-tw/%E4%B8%8E%E9%97%A8
+*/
 }

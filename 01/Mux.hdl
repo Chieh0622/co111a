@@ -15,4 +15,10 @@ CHIP Mux {
 
     PARTS:
     // Put your code here:
+    Not(in = sel, out = notsel);
+    And(a = a, b = notsel, out = A1);
+    And(a = b, b = sel, out = A2);
+    Or(a = A1, b = A2, out = out);
+
+    // 圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FMux-structure-Fig-3-gives-an-example-of-the-simulation-algorithm-The-example-circuit-is_fig2_269272628&psig=AOvVaw0CVgm02a4tEnXPZ-cm2lGy&ust=1668513320651000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLDLy8_OrfsCFQAAAAAdAAAAABAh
 }

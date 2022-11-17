@@ -17,4 +17,33 @@ CHIP DMux4Way {
 
     PARTS:
     // Put your code here:
+// method1:
+    Not(in = sel[0], out = notsel0);
+    Not(in = sel[1], out = notsel1);
+
+    // output_a
+    And(a = notsel1, b = notsel0, out = sel00);
+    And(a = in, b = sel00, out = a);
+
+    // output_b
+    And(a = notsel1, b = sel[0], out = sel01);
+    And(a = in, b = sel01, out = b);
+
+    // output_c
+    And(a = sel[1], b = notsel0, out = sel10);
+    And(a = in, b = sel10, out = c);
+
+    // output_d
+    And(a = sel[1], b = sel[0], out = sel11);
+    And(a = in, b = sel11, out = d);
+    
+    // 圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fcircuitverse.org%2Fusers%2F14801%2Fprojects%2Fdmux4way-61cd16a1-efb6-43fa-9d53-dc5d685ab40a&psig=AOvVaw1cIUHVpTfgtAVOr3mpdz1k&ust=1668511924744000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPiO_7XJrfsCFQAAAAAdAAAAABAE
+
+/* method2:
+    DMux(in = in, sel = sel[0], a = a0, b = b0);
+    DMux(in = a0, sel = sel[1], a = a, b = c);
+    DMux(in = b0, sel = sel[1], a = b, b = d);
+    
+    //圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fscrapbox.io%2Fineedhelp%2FDMux4Way&psig=AOvVaw1cIUHVpTfgtAVOr3mpdz1k&ust=1668511924744000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPiO_7XJrfsCFQAAAAAdAAAAABAJ
+*/
 }

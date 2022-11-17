@@ -15,4 +15,9 @@ CHIP DMux {
 
     PARTS:
     // Put your code here:
+    Not(in = sel, out = notsel);
+    And(a = in, b = notsel, out = a);
+    And(a = sel, b = in, out = b);
+
+    // 圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Ftomorrow0w0.gitbooks.io%2Fnand2tetris-homework%2Fchapter1%2FDMux.html&psig=AOvVaw1h2FBLKzbE3czWwkvfKDt_&ust=1668513243375000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCJDBtqrOrfsCFQAAAAAdAAAAABAE
 }

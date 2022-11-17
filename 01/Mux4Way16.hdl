@@ -17,4 +17,10 @@ CHIP Mux4Way16 {
 
     PARTS:
     // Put your code here:
+    Mux16(a = a, b = b, sel = sel[0], out = Mux1);
+    Mux16(a = c, b = d, sel = sel[0], out = Mux2);
+    
+    Mux16(a = Mux1, b = Mux2, sel = sel[1], out = out);
+
+    // 圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Ftomorrow0w0.gitbooks.io%2Fnand2tetris-homework%2Fchapter1%2FMux4Way16.html&psig=AOvVaw1q_BMnjcLRqn8Lx-ZeDllq&ust=1668515093310000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPCvxpzVrfsCFQAAAAAdAAAAABAE
 }

@@ -17,4 +17,11 @@ CHIP PC {
 
     PARTS:
     // Put your code here:
+    Inc16(in = regout, out = incout);
+    Mux16(a = regout, b = incout, sel = inc, out = mux1);
+    Mux16(a = mux1, b = in, sel = load, out = mux2);
+    Mux16(a = mux2, b = false, sel = reset, out = mux3);
+    Register(in = mux3, load = true, out = regout, out = out);
+
+    // 圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fnand2tetris-hdl.github.io%2F&psig=AOvVaw33sOO423o-s2DLNHE1TtTW&ust=1668753605747000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKD93eDNtPsCFQAAAAAdAAAAABAE
 }

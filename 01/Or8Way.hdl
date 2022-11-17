@@ -14,4 +14,28 @@ CHIP Or8Way {
 
     PARTS:
     // Put your code here:
+//method1:
+    Or(a = in[0], b = in[1], out = a1);
+    Or(a = in[2], b = in[3], out = a2);
+    Or(a = in[4], b = in[5], out = a3);
+    Or(a = in[6], b = in[7], out = a4);
+
+    Or(a = a1, b = a2, out = b1);
+    Or(a = a3, b = a4, out = b2);
+
+    Or(a = b1, b = b2, out = out);
+
+    // 圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fcircuitverse.org%2Fusers%2F35601%2Fprojects%2For8way-12d594de-4ec0-45d8-90d7-15b872f30bae&psig=AOvVaw2uB9TXWrxXtiiP86fgGU2w&ust=1668609450213000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCKj-n920sPsCFQAAAAAdAAAAABA4
+
+/* method2:
+    Or(a = in[0], b = in[1], out = out01);
+    Or(a = out01, b = in[2], out = out02);
+    Or(a = out02, b = in[3], out = out03);
+    Or(a = out03, b = in[4], out = out04);
+    Or(a = out04, b = in[5], out = out05);
+    Or(a = out05, b = in[6], out = out06);
+    Or(a = out06, b = in[7], out = out);
+
+    圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fcircuitverse.org%2Fusers%2F14801%2Fprojects%2For8way-dce75801-e532-48da-a806-ee4dbd70134c&psig=AOvVaw2uB9TXWrxXtiiP86fgGU2w&ust=1668609450213000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCKj-n920sPsCFQAAAAAdAAAAABAv
+*/
 }

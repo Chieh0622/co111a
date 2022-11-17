@@ -14,4 +14,8 @@ CHIP HalfAdder {
 
     PARTS:
     // Put you code here:
+    Xor(a = a, b = b, out = sum);
+    And(a = a, b = b, out = carry);
+
+    // 圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.m.wikipedia.org%2Fwiki%2FFile%3AHalf_Adder.svg&psig=AOvVaw1l1PY9jloKiMZk-gPCxUGX&ust=1668611929652000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCLjNxfu9sPsCFQAAAAAdAAAAABAE
 }

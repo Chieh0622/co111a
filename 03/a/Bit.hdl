@@ -15,4 +15,8 @@ CHIP Bit {
 
     PARTS:
     // Put your code here:
+    Mux(a = dfout, b = in, sel = load, out = muxab);
+    DFF(in = muxab, out = dfout, out = out);
+
+    // 圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fnand2tetris-hdl.github.io%2F&psig=AOvVaw14e0H-qyH5C_UMT8sU1IUd&ust=1668752097232000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNinzpHItPsCFQAAAAAdAAAAABAE
 }

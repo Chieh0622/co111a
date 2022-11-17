@@ -14,4 +14,13 @@ CHIP FullAdder {
 
     PARTS:
     // Put you code here:
+    Xor(a = a, b = b, out = xab);
+    Xor(a = xab, b = c, out = sum);
+
+    And(a = c, b = xab, out = and1);
+    And(a = a, b = b, out = and2);
+
+    Or(a = and1, b = and2, out = carry);
+
+    // 圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fmicrocontrollerslab.com%2Fcd4008-4-bit-full-adder-ic-pinout-features-example-datasheet%2F&psig=AOvVaw3lducqmIQ_GX-09Xc7Wmhr&ust=1668612168585000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKDn4O2-sPsCFQAAAAAdAAAAABAO
 }
