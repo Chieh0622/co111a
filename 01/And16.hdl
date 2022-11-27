@@ -32,6 +32,5 @@ CHIP And16 {
     And(a = a[14], b = b[14], out = out[14]);
     And(a = a[15], b = b[15], out = out[15]);
 
-    // 參考:https://people.duke.edu/~nts9/logicgates/And16.hdl
     // 圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Ftomorrow0w0.gitbooks.io%2Fnand2tetris-homework%2Fchapter1%2FAnd16.html&psig=AOvVaw2Uh1M3bh1XHDoT4IVobRUd&ust=1668514714576000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCODJ-OfTrfsCFQAAAAAdAAAAABAJ
 }

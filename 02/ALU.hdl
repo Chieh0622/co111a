@@ -43,6 +43,7 @@ CHIP ALU {
 
     PARTS:
     // Put you code here:
+    // 看著老師的圖做的
     // zx, zy
     Mux16(a = x, b = false, sel = zx, out = muxzx);
     Mux16(a = y, b = false, sel = zy, out = muxzy);
@@ -58,6 +59,7 @@ CHIP ALU {
     Add16(a = muxnx, b = muxny, out = addxy);
     Mux16(a = andxy, b = addxy, sel = f, out = muxf);
 
+    // 模仿下面網址，但還是沒有很了解
     // no, ng
     Not16(in = muxf, out = notf);
     Mux16(a = muxf, b = notf, sel = no, out = out, out[0..7] = out1, out[8..15] = out2, out[15] = ng);
@@ -68,5 +70,5 @@ CHIP ALU {
     Or(a = or81, b = or82, out = orab);
     Not(in = orab, out = zr);
 
-    // 參考:https://github.com/Olical/nand2tetris/blob/master/chips/arithmatic/ALU.hdl
+    // 參考:https://people.duke.edu/~nts9/logicgates/ALU.hdl
 }

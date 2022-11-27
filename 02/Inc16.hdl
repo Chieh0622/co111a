@@ -34,8 +34,9 @@ CHIP Inc16 {
    // https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dr-XS6RLObSo&psig=AOvVaw2xDN-p22wpoZXGF7fIeoNM&ust=1668653094571000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCIjXu6jXsfsCFQAAAAAdAAAAABAl
 
 /*
+    複製下面網址
     Add16(a = in, b[0] = true, out = out);
-
-    參考:https://people.duke.edu/~nts9/logicgates/Inc16.hdl
+    
+    複製:https://people.duke.edu/~nts9/logicgates/Inc16.hdl
 */
 }

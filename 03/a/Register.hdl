@@ -31,4 +31,6 @@ CHIP Register {
     Bit(in = in[13], load = load, out = out[13]);
     Bit(in = in[14], load = load, out = out[14]);
     Bit(in = in[15], load = load, out = out[15]);
+
+    // 圖片參考: https://www.google.com/url?sa=i&url=https%3A%2F%2Fsterlingmorley.gitbooks.io%2Fnand2tetris%2Fbit.html&psig=AOvVaw1LfLLkh4KTcJ_z9vuf5XbY&ust=1669603805942000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJC4-v6szfsCFQAAAAAdAAAAABAN
 }
