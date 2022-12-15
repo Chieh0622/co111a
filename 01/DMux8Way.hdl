@@ -18,7 +18,7 @@ CHIP DMux8Way {
     PARTS:
     // Put your code here:
 // method1:
-/*    Not(in = sel[0], out = notsel0);
+    Not(in = sel[0], out = notsel0);
     Not(in = sel[1], out = notsel1);
     Not(in = sel[2], out = notsel2);
 
@@ -60,8 +60,8 @@ CHIP DMux8Way {
     And(a = in, b = sel111, out = h);
 
     // 圖片參考: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.electronicshub.org%2Fdemultiplexerdemux%2F&psig=AOvVaw0dBHgF1BvpJ9zGUAcQDALa&ust=1668510895009000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNDfhcvFrfsCFQAAAAAdAAAAABAQ
-*/
-// method2:
+
+/* method2:
     DMux(in = in, sel = sel[2], a = a0, b = a1);
 
     DMux(in = a0, sel = sel[1], a = b0, b = b1);
@@ -74,5 +74,5 @@ CHIP DMux8Way {
 
   //  圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fcircuitverse.org%2Fusers%2F35585%2Fprojects%2Fdmux8way-3c4d8759-71ed-4a66-bc22-b240ef07199e&psig=AOvVaw0dBHgF1BvpJ9zGUAcQDALa&ust=1668510895009000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNDfhcvFrfsCFQAAAAAdAAAAABAj
     //圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fscrapbox.io%2Fineedhelp%2FDMux8Way&psig=AOvVaw0dBHgF1BvpJ9zGUAcQDALa&ust=1668510895009000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNDfhcvFrfsCFQAAAAAdAAAAABBK
-//*/
+*/
 }
