@@ -40,10 +40,10 @@ CHIP DMux4Way {
     // 圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fcircuitverse.org%2Fusers%2F14801%2Fprojects%2Fdmux4way-61cd16a1-efb6-43fa-9d53-dc5d685ab40a&psig=AOvVaw1cIUHVpTfgtAVOr3mpdz1k&ust=1668511924744000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPiO_7XJrfsCFQAAAAAdAAAAABAE
 
 /* method2:
-    DMux(in = in, sel = sel[0], a = a0, b = b0);
-    DMux(in = a0, sel = sel[1], a = a, b = c);
-    DMux(in = b0, sel = sel[1], a = b, b = d);
+    DMux(in = in, sel = sel[1], a = a0, b = b0);
+    DMux(in = a0, sel = sel[0], a = a, b = b);
+    DMux(in = b0, sel = sel[0], a = c, b = d);
     
-    //圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fscrapbox.io%2Fineedhelp%2FDMux4Way&psig=AOvVaw1cIUHVpTfgtAVOr3mpdz1k&ust=1668511924744000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPiO_7XJrfsCFQAAAAAdAAAAABAJ
+    圖片參考:https://www.google.com/url?sa=i&url=https%3A%2F%2Fscrapbox.io%2Fineedhelp%2FDMux4Way&psig=AOvVaw1cIUHVpTfgtAVOr3mpdz1k&ust=1668511924744000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPiO_7XJrfsCFQAAAAAdAAAAABAJ
 */
 }
