@@ -1,7 +1,7 @@
 module HelloVerilog;
 
 initial begin
-    $display("Hello, iverilog");
+    $display("Hello World!");
     #40 $finish;
 end
 
