@@ -1,4 +1,4 @@
-module HelloVerilog;
+module HelloWorld;
 initial 
 begin
     $display("Hello World!");
