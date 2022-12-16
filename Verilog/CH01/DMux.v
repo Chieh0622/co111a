@@ -1,4 +1,4 @@
-`include "gate16.v"
+`include "Mux.v"
 
 module DMux (in, sel, a, b);
     input in, sel;
