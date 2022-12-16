@@ -2,7 +2,7 @@ module Nand (a, b, out);
     input a, b;
     output out;
 
-    nand g1(out, a, b);    
+    nand g0(out, a, b);
 endmodule
 
 module Not (in, out);
@@ -17,7 +17,7 @@ module And (a, b, out);
     output out;
 
     Nand g0(a, b, nandab);
-    Not  g1(nandab, nandab, out);
+    Not  g1(nandab, out);
 endmodule
 
 module Or (a, b, out);
@@ -42,10 +42,10 @@ module  Or8Way(in, out);
     input [7:0] in;
     output out;
 
-    Or g0(in[0], in[1], a1);
-    Or g1(in[2], in[3], a2);
-    Or g2(in[4], in[5], a3);
-    Or g3(in[6], in[7], a4);
+    Or g0(in[7], in[6], a1);
+    Or g1(in[5], in[4], a2);
+    Or g2(in[3], in[2], a3);
+    Or g3(in[1], in[0], a4);
 
     Or g4(a1, a2, b1);
     Or g5(a3, a4, b2);
