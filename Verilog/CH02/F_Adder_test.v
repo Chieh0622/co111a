@@ -26,11 +26,11 @@ module main;
         
     end
 
-    always #150
+    always #200
     begin
         a++;
     end
 
 
-    initial #201 $finish;
+    initial #350 $finish(0);
 endmodule

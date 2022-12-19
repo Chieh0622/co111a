@@ -14,5 +14,6 @@ module main;
         $monitor("%b | %b | %b | %b | %b", a, b, nota, andab, orab);
         a = 16'b10010101;
         b = 16'b10111010;
+        $finish(0);
     end
 endmodule

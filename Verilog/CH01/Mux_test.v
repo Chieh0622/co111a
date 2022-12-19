@@ -29,5 +29,5 @@ module main;
         sel++;
     end
     
-    initial #501 $finish;
+    initial #500 $finish(0);
 endmodule

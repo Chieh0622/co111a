@@ -28,5 +28,5 @@ begin
     a++;
 end
 
-initial #151 $finish;
+initial #150 $finish(0);
 endmodule
