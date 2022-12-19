@@ -1,4 +1,4 @@
-`include "./CH01/DMux.v"
+`include "../CH01/gates01.v"
 
 module HalfAdder (a, b, sum, carry);
     input a, b;
@@ -12,7 +12,7 @@ module FullAdder (a, b, c, sum, carry);
     input a, b, c;
     output sum, carry;
     wire xab, and1, and2;
-
+    
     Xor g0(a, b, xab);
     Xor g1(xab, c, sum);
 
