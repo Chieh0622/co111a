@@ -26,7 +26,7 @@ module main;
 
     always #50
     begin
-        sel = sel + 1;
+        sel++;
     end
     
     initial #501 $finish;

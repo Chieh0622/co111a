@@ -20,12 +20,12 @@ end
 
 always #50 
 begin
-    b = b + 1;
+    b++;
 end
 
 always #100
 begin
-    a = a + 1;
+    a++;
 end
 
 initial #151 $finish;
