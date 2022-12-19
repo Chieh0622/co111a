@@ -19,7 +19,7 @@ module  main;
 
     always #50
     begin
-        sel++; 
+        sel = sel + 1; 
     end
 
     always #200

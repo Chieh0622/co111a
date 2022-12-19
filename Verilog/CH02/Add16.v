@@ -1,5 +1,4 @@
-`include "Adder.v
-"
+`include "HF_Adder.v"
 
 module Add16 (a, b, out);
     input [15:0] a, b;
@@ -8,7 +7,6 @@ module Add16 (a, b, out);
     wire trash;
 
     HalfAdder g00(a[0], b[0], out[0], c[0]);
-    
     FullAdder g01(a[1], b[1], c[0], out[1], c[1]);
     FullAdder g02(a[2], b[2], c[1], out[2], c[2]);
     FullAdder g03(a[3], b[3], c[2], out[3], c[3]);
@@ -24,11 +22,4 @@ module Add16 (a, b, out);
     FullAdder g13(a[13], b[13], c[12], out[13], c[13]);
     FullAdder g14(a[14], b[14], c[13], out[14], c[14]);
     FullAdder g15(a[15], b[15], c[14], out[15], trash);
-endmodule
-
-module Inc16 (in, out);
-    input in;
-    output out;
-
-    Add16 g0(in, true, out);
 endmodule

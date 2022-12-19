@@ -14,13 +14,15 @@ module main;
         b = 0;
     end
 
-    always #50 begin
+    always #50 
+    begin
         b++;
     end
 
-    always #100 begin        
+    always #100 
+    begin        
         a++;
     end
 
-    initial #151 $finish;
+    initial #150 $finish(0);
 endmodule
