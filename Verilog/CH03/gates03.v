@@ -149,6 +149,31 @@ module RAM16K (in, clk, load, address, out);
 */
 endmodule
 
+module RAM8K(in, clk, load, address, out);
+    input [15:0] in; 
+    input clk, load;
+    input [12:0] address;
+    output [15:0] out;
+
+    reg[15:0] m[0:2**13-1];
+  
+    assign out = m[address];
+  
+    always @(posedge clk) 
+    begin
+        if (load) m[address] = in;
+    end
+endmodule
+
+module ROM32K(address, out);
+    input[14:0] address;
+    output[15:0] out;
+
+    reg[15:0] m[0:2**15-1];
+  
+    assign out = m[address];
+endmodule
+
 module PC (in, clk, load, inc, reset, out);
     input [15:0] in;
     input clk, load, inc, reset;

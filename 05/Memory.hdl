@@ -32,8 +32,8 @@ CHIP Memory {
     Or(a = dmuxa, b = dmuxb, out = orab);
     RAM16K(in = in, load = orab, address = address[0..13], out = ramout);
     Screen(in = in, load = dmuxc, address = address[0..12], out = screenout);
-    Keyboard(out = kbout);
-    Mux4Way16(a = ramout, b = ramout, c = screenout, d = kbout, sel = address[13..14], out = out);
+    Keyboard(out = kbdout);
+    Mux4Way16(a = ramout, b = ramout, c = screenout, d = kbdout, sel = address[13..14], out = out);
 
     // 圖片參考:https://s3.ap-northeast-1.wasabisys.com/img.tw511.com/202008/20200814221928999yjabrmzjbar.png
 }
