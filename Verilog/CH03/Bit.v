@@ -1,7 +1,7 @@
 `include "DFF.v"
 
 module Bit (in, clk, load, out);
-    input in, load;
+    input in, clk, load;
     output out;
     wire muxab;
 

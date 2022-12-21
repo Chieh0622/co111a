@@ -4,7 +4,7 @@ module main;
 reg  [15:0] a,b;
 wire [15:0] out;
 
-Add16 g1(a, b, out);
+Add16 g0(a, b, out);
 
 initial
     begin

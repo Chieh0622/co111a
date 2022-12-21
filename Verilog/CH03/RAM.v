@@ -39,7 +39,7 @@ module RAM64 (in, clk, load, address, out);
     RAM8      g8(in, clk, l7, address[2:0], r7);
     Mux8Way16 g9(r0, r1, r2, r3, r4, r5, r6, r7, address[5:3], out);
 endmodule
-
+/*
 module RAM512 (in, clk, load, address, out);
     input [15:0] in;
     input clk, load;
@@ -79,19 +79,27 @@ module RAM4K (in, clk, load, address, out);
     RAM512    g8(in, clk, l7, address[8:0], r7);
     Mux8Way16 g9(r0, r1, r2, r3, r4, r5, r6, r7, address[11:9], out);
 endmodule
-
+*/
 module RAM16K (in, clk, load, address, out);
     input [15:0] in;
     input clk, load;
     input [13:0] address;
     output [15:0] out;
-    wire l0, l1, l2, l3;
-    wire [15:0] r0, r1, r2, r3;
 
+    reg[15:0] m[0:2**14 - 1];
+
+    assign out = m[address];
+
+    always @(posedge clk) begin
+        if (load) m[address] = in;
+    end
+
+/*
     DMux4Way  g0(load, address[13:12], l0, l1, l2, l3);
-    RAM4K     g1(in, clk, address[11:0], r0);
-    RAM4K     g2(in, clk, address[11:0], r1);
-    RAM4K     g3(in, clk, address[11:0], r2);
-    RAM4K     g4(in, clk, address[11:0], r3);
-    Mux4Way16 g5(r0, r1, r2, r3, address[13:12], out)
+    RAM4K     g1(in, clk, l0, address[11:0], r0);
+    RAM4K     g2(in, clk, l1, address[11:0], r1);
+    RAM4K     g3(in, clk, l2, address[11:0], r2);
+    RAM4K     g4(in, clk, l3, address[11:0], r3);
+    Mux4Way16 g5(r0, r1, r2, r3, address[13:12], out);
+*/
 endmodule

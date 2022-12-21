@@ -3,7 +3,7 @@
 module Register (in, clk, load, out);
     input [15:0] in;
     input load, clk;
-    output out;
+    output [15:0] out;
 
     Bit g00(in[0], clk, load, out[0]);
     Bit g01(in[1], clk, load, out[1]);

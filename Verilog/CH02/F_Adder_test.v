@@ -17,18 +17,18 @@ module main;
 
     always #50 
     begin
-        c++;    
+        c = c + 1;    
     end
 
     always #100 
     begin     
-        b++;   
+        b = b + 1;   
         
     end
 
     always #200
     begin
-        a++;
+        a = a + 1;
     end
 
 

@@ -16,12 +16,12 @@ module main;
 
     always #50 
     begin
-        b++;
+        b = b + 1;
     end
 
     always #100 
     begin        
-        a++;
+        a = a + 1;
     end
 
     initial #150 $finish(0);
